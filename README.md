@@ -27,3 +27,4 @@ height 34.25vw
 # 值得注意的细节
 ## img标签 用 v-bind指令监听src地址的改变 :src
 ## swiper需要滚动跳转时 在 swiperOption 下添加 ```loop: true```
+## ~@ 表示src
