@@ -15,6 +15,14 @@
       </swiper-slide>
       <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
+    <div class="icon-block border-top">
+      <span class="block-left  border-right">
+        <i class="iconfont iconfont-size1">&#xe87e;</i>
+        定位失败</span>
+      <span class="block-right ">
+        <i class="iconfont iconfont-size2">&#xe888;</i>
+        必游榜单</span>
+    </div>
   </div>
   
 </template>
@@ -137,4 +145,26 @@ export default {
         text-align center
         color $darkTextColor
         ellipsis()
+  .icon-block
+    display flex
+    width 100%
+    height 0.98rem
+    font-size 0
+    // padding-bottom 10%
+    // background green
+    .block-left
+      float left
+      width 50%
+      line-height .98rem
+      text-align center
+      font-size .28rem
+      .iconfont-size1
+        font-size .26rem
+    .block-right
+      flex 1
+      text-align center
+      line-height .98rem
+      font-size .28rem
+      .iconfont-size2
+        font-size .32rem
 </style>
