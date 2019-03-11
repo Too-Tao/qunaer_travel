@@ -102,37 +102,39 @@ export default {
 @import '~@/assets/styles/varibles.styl'
 @import '~@/assets/styles/mixins.styl'
   .icons >>> .swiper-container
+  .icons
+    margin-top .1rem
     height 0
     padding-bottom 50%
-  .icon
-    position relative
-    overflow hidden
-    width 25%
-    float left
-    padding-bottom 25%
-    // background red
-    .icon-img
-      position absolute
-      top 0
-      right 0
-      left 0
-      bottom .44rem
-      // background blue
-      box-sizing border-box
-      padding .1rem
-      .icon-img-content
-        display block
-        margin 0 auto 
-        // width 100%
-        height 100%
-    .icon-desc
-      position absolute
-      left 0
-      right 0
-      bottom 0
-      height 0.44rem
-      line-height 0.44rem
-      text-align center
-      color $darkTextColor
-      ellipsis()
+    .icon
+      position relative
+      overflow hidden
+      width 25%
+      float left
+      padding-bottom 25%
+      // background red
+      .icon-img
+        position absolute
+        top 0
+        right 0
+        left 0
+        bottom .44rem
+        // background blue
+        box-sizing border-box
+        padding .1rem
+        .icon-img-content
+          display block
+          margin 0 auto 
+          // width 100%
+          height 100%
+      .icon-desc
+        position absolute
+        left 0
+        right 0
+        bottom 0
+        height 0.44rem
+        line-height 0.44rem
+        text-align center
+        color $darkTextColor
+        ellipsis()
 </style>
