@@ -13,7 +13,9 @@
         <div class="view-info">
           <div class="view-title">{{item.title}}</div>
           <div class="view-content">
-            <span class="star"></span>
+            <span class="star">
+              <Star :size="48" :star="item.star"/>
+            </span>
             <span class="comment">{{item.comment}}</span>
           </div>
           <div class="price-address">
@@ -28,8 +30,12 @@
 </template>
 
 <script>
+import Star from '../../../common/star/Star.vue'
 export default {
   name: 'Recommed',
+  components: {
+    Star
+  },
   data() {
     return {
       viewList: [
@@ -39,7 +45,7 @@ export default {
           msg: '可定明日',
           img: 'http://img1.qunarzz.com/sight/p0/1610/88/88ec04f6d021724da3.water.jpg_200x200_d9307de0.jpg',
           title: '南昌融创电影乐园（原万达电影乐园）',
-          star: '',
+          star: '4',
           comment: '1372条评论',
           price: '170',
           address: '九龙湖新区'
@@ -50,7 +56,7 @@ export default {
           msg: '可订今日',
           img: 'http://img1.qunarzz.com/sight/p0/1610/83/83a873f755d64992a3.water.jpg_200x200_f7acbacd.jpg',
           title: '南昌融创主题乐园（原万达主题乐园）',
-          star: '',
+          star: '4.9',
           comment: '17199条评论',
           price: '170',
           address: '红谷滩新区'
@@ -61,7 +67,7 @@ export default {
           msg: '可定明日',
           img: 'http://img1.qunarzz.com/sight/p0/1610/16/165075d3fcbe7c8ba3.water.jpg_200x200_dacfbf65.jpg',
           title: '南昌融创海洋乐园（原万达海洋乐园）',
-          star: '',
+          star: '4.1',
           comment: '7403条评论',
           price: '90',
           address: '南昌'
@@ -72,7 +78,7 @@ export default {
           msg: '',
           img: 'http://img1.qunarzz.com/sight/p0/1701/c0/c0899de1bcef6f9a3.img.jpg_200x200_b5b00164.jpg',
           title: '南昌融创电影乐园（原万达电影乐园）',
-          star: '',
+          star: '3.9',
           comment: '193条评论',
           price: '86',
           address: '西湖区'
@@ -83,7 +89,7 @@ export default {
           msg: '可定明日',
           img: 'http://img1.qunarzz.com/sight/p0/1610/88/88ec04f6d021724da3.water.jpg_200x200_d9307de0.jpg',
           title: '南昌融创电影乐园（原万达电影乐园）',
-          star: '',
+          star: '3',
           comment: '1372条评论',
           price: '170',
           address: '九龙湖新区'
@@ -94,7 +100,7 @@ export default {
           msg: '可定明日',
           img: 'http://img1.qunarzz.com/sight/p0/1602/49/4917c5b8d400d5b890.img.jpg_200x200_4e55a084.jpg',
           title: '凤凰沟',
-          star: '',
+          star: '3.5',
           comment: '2075条评论',
           price: '24.5',
           address: '西湖区'
@@ -105,7 +111,7 @@ export default {
           msg: '可定明日',
           img: 'http://img1.qunarzz.com/sight/p0/1608/9c/9c744efe971f8966a3.water.jpg_200x200_3bfda054.jpg',
           title: '怪石岭生态公园（南昌长城）',
-          star: '',
+          star: '4.5',
           comment: '3966条评论',
           price: '39',
           address: '新建县'
@@ -142,7 +148,6 @@ export default {
           float left
           width 2rem
           height 2rem
-          background green 
           margin-right .22rem
           .img
             width 100%
@@ -169,8 +174,6 @@ export default {
               line-height .28rem
               font-size .28rem
               letter-spacing .2rem
-              background #eeeeee
-              
             .comment
               margin-left .2rem
               color #616161
