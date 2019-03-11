@@ -17,7 +17,7 @@
             <span class="comment">{{item.comment}}</span>
           </div>
           <div class="price-address">
-            <span class="price"><span style="color: #ff8300">￥{{item.price}}</span>起</span>
+            <span class="price"><span style="color: #ff8300">￥<em style="fontSize: .4rem">{{item.price}}</em></span>起</span>
             <span class="address">红谷滩新区</span>
           </div>
         </div>

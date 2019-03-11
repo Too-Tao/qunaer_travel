@@ -6,6 +6,7 @@
     <home-recommend-swiper/>
     <home-recommed/>
     <home-week/>
+    <home-copyright/>
   </div>
 </template>
 
@@ -16,6 +17,7 @@ import HomeIcons from './components/Icons.vue'
 import HomeRecommendSwiper from './components/RecommedSwiper.vue'
 import HomeRecommed from './components/Recommed.vue'
 import HomeWeek from './components/Week.vue'
+import HomeCopyright from './components/Copyright.vue'
 export default {
   name: 'Home',
   components: {
@@ -24,7 +26,8 @@ export default {
     HomeIcons,
     HomeRecommendSwiper,
     HomeRecommed,
-    HomeWeek
+    HomeWeek,
+    HomeCopyright
   }
 }
 </script>

@@ -14,7 +14,7 @@
                 <img class="item-img-img" :src="item.img">
               </div>
               <div class="item-title">{{item.title}}</div>
-              <div class="item-price"><span style="color: #ff8300">￥{{item.price}}</span>起</div>
+              <div class="item-price"><span style="color: #ff8300">￥<em style="fontSize: .28rem">{{item.price}}</em></span>起</div>
             </a>
           </li>
         </ul>
