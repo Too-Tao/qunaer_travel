@@ -200,4 +200,5 @@ export default {
       line-height .4rem
       color #00afc7
       font-size .28rem
+      margin-bottom .2rem
 </style>
