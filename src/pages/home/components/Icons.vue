@@ -13,7 +13,7 @@
           <p class="icon-desc">{{ item.desc }}</p>
         </div>
       </swiper-slide>
-      
+      <div class="swiper-pagination"  slot="pagination"></div>
     </swiper>
   </div>
   
@@ -77,7 +77,7 @@ export default {
         }
       ],
       swiperOption: {
-        // pagination: '.swiper-pagination',
+        pagination: '.swiper-pagination',
         // loop: true
       }
     }
@@ -111,7 +111,7 @@ export default {
       overflow hidden
       width 25%
       float left
-      padding-bottom 25%
+      padding-bottom 23%
       // background red
       .icon-img
         position absolute
