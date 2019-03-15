@@ -16,7 +16,7 @@ export default {
       type: Number
     },
     star: {
-      type: Number
+      type: String
     }
   },
   computed: {

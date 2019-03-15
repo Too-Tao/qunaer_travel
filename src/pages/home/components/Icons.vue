@@ -28,72 +28,31 @@
 </template>
 
 <script>
+import axios from 'axios'
 export default {
   name: 'HomeIcons',
   data() {
     return {
-      iconList: [
-        {
-          id: '001',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-          desc: '景点门票'
-        },
-        {
-          id: '002',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/f5/a963333e1fa802.png',
-          desc: '本地游玩'
-        },
-        {
-          id: '003',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/96/c70f1e85ae4a4f02.png',
-          desc: '自然风光'
-        },
-        {
-          id: '004',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-          desc: '一日游'
-        },
-        {
-          id: '005',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png',
-          desc: '游乐场'
-        },
-        {
-          id: '006',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/ab/6f7d6e44963c9302.png',
-          desc: '泡温泉'
-        },
-        {
-          id: '007',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/ff/fdf170ee89594b02.png',
-          desc: '南昌必游'
-        },
-        {
-          id: '008',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/ec/0e1e0238e24ba02.png',
-          desc: '婺源'
-        },
-        {
-          id: '009',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/3e/86314b2af03b7502.png',
-          desc: '融创乐园'
-        },
-        {
-          id: '010',
-          imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/80/416c6ab3368d1f02.png',
-          desc: '全部玩乐'
-        }
-      ],
+      iconList: [],
       swiperOption: {
         pagination: '.swiper-pagination',
         // loop: true
       }
     }
   },
+  created() {
+    axios
+      .get('https://www.easy-mock.com/mock/5c8b17ff7829617514a4dca9/data')
+      .then( res => {
+        this.iconList = res.data.iconList
+      })
+  },
   computed: {
+    //计算pages 总共有多少跳数据
     pages () {
       const pages = []
       this.iconList.forEach((item, index) => {
+        //每页设置8条数据
         const page = Math.floor(index / 8)
         if ( !pages[page] ) {
           pages[page] = []
